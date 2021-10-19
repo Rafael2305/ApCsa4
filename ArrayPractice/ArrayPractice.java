@@ -23,20 +23,16 @@ public class ArrayPractice
         return sum;
     }
     public double getAverage(){
-        int sum = 0;
-        for(int i = 0; i < arr.length; i++){
-            sum += arr[i];
-        }
-        double avg = sum / arr.length;
+        double avg = (double) getSum() / arr.length;
         return avg;
     }
     public int getLargest(){
-        int biggest = 0;
+        int largest = arr[0];
         for(int i = 0; i < arr.length; i++){
-            if (biggest < arr[i]){
-                biggest = arr[i];
+            if (largest < arr[i]){
+                largest = arr[i];
             }
         }
-        return biggest;
+        return largest;
     }
 }

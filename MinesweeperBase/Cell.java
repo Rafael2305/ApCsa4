@@ -44,10 +44,14 @@ public class Cell implements ActionListener{
     public int getValue(){
         return value;
     }
-    public String addMine(){
-        value = 1;
+    
+    public void setValueMine(){
+        value = 25;
     }
     
+    public void increase(){
+        value += 1;
+    }
     //The following methods are used for the User Inferface. These methods are fully functional and do not need to be modified.
     public void checkCell(){
         button.setEnabled(false);

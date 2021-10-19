@@ -34,11 +34,51 @@ public class MinesweeperBoard{
     }
 
     public void addMines(int mines) throws Exception{
-        
+        if (mines < 0){
+            throw new Exception("This is a negative number");
+        } else if (mines > 100){
+            throw new Exception("There are more mines then spots possible");
+        } else{
+            for(int i = 0; i < mines; i++){
+                int adder = (int)(Math.random() * board.length);
+                if(board[adder].getValue() == 0){
+                    board[adder].setValueMine();
+                } else{
+                    i--;
+                }
+            }
+        }
     }
 
     public void addNums(){
-
+        for(int i = 0; i < board.length; i++){
+            if(board[i].isMine()){
+                if(i - 1 >= 0 && !board[i-1].isMine()){
+                    board[i-1].increase();
+                }
+                if(!board[i+1].isMine()){
+                    board[i+1].increase();
+                }
+                if(!board[i + columns].isMine()){
+                    board[i + columns].increase();
+                }
+                if(!board[i - columns].isMine()){
+                    board[i - columns].increase();
+                }
+                if(!board[i - columns -1].isMine()){
+                    board[i - columns -1].increase();
+                }
+                if(!board[i - columns +1].isMine()){
+                    board[i - columns +1].increase();
+                }
+                if(!board[i + columns + 1].isMine()){
+                    board[i + columns + 1].increase();
+                }
+                if(!board[i + columns - 1].isMine()){
+                    board[i + columns -1].increase();
+                }
+            }
+        }
     }
 
     /**This method is used for testing and will be deleted if using the GUI.
@@ -48,12 +88,16 @@ public class MinesweeperBoard{
 
         for(int r = 0; r < rows; r++){
             for (int c = 0; c < columns; c++){
-                System.out.print(board[rows + 5 * columns].getValue());
+                if (!board[r * columns + c].isMine()){
+                    System.out.print(board[r * columns + c].getValue() + " ");
+                } else{
+                    System.out.print("X ");
+                }
             }
             System.out.println();
         }
-
     }
+
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
         for(int i = 0; i< rows*columns; i++){
@@ -61,5 +105,5 @@ public class MinesweeperBoard{
             panel.add(board[i].getButton());
         }
         return panel;
-        }
     }
+}
