@@ -54,31 +54,36 @@ public class MinesweeperBoard{
         for(int i = 0; i < board.length; i++){
             if(board[i].isMine()){
                 // left and right
-                if(i - 1 >= 0 && i-1 % columns != columns - 1 && !board[i-1].isMine()){
-                    board[i-1].increase();
+                if(i - 1 >= 0 && i - 1 % columns != 0 && !board[i - 1].isMine()){
+                    board[i - 1].increase();
                 }
-                if(i + 1 <= board.length - 1 && i + 1 % columns != 0 && !board[i+1].isMine()){
-                    board[i+1].increase();
+                if(i + 1 <= board.length - 1 && i + 1 % columns != columns - 1 && !board[i + 1].isMine()){
+                    board[i + 1].increase();
                 }
-                //down and up
-                if(i + columns <= board.length - 1 && !board[i + columns].isMine()){
-                    board[i + columns].increase();
-                }
+                
+                // top and bottom
                 if(i - columns >= 0 && !board[i - columns].isMine()){
                     board[i - columns].increase();
                 }
-                //top/bottom left/right
-                if(i - columns - 1 >= 0 && i - columns - 1 % columns != columns - 1 && !board[i - columns -1].isMine()){
+                if(i + columns <= board.length - 1 && !board[i + columns].isMine()){
+                    board[i + columns].increase();
+                }
+                
+                // left top 2,1,isMine
+                if(i - columns - 1 >= 0 && i - columns - 1 % columns != 0 && i - columns - 1 >= 0 && !board[i - columns - 1].isMine()){
                     board[i - columns - 1].increase();
                 }
-                if(i - columns + 1 >= 0 && !board[i - columns +1].isMine()){
+                // right top 2,1,isMine
+                if(i - columns + 1 <= board.length - 1 && i - columns + 1 % columns != columns - 1 && i - columns + 1 >= 0 && !board[i - columns + 1].isMine()){
                     board[i - columns + 1].increase();
                 }
-                if(!board[i + columns + 1].isMine()){
-                    board[i + columns + 1].increase();
+                //left bottom 2,1,isMine
+                if(i + columns - 1 >= 0 && i + columns - 1 % columns != 0 && i + columns - 1 <= board.length - 1 && !board[i + columns - 1].isMine()){
+                    board[i + columns - 1].increase();
                 }
-                if(!board[i + columns - 1].isMine()){
-                    board[i + columns -1].increase();
+                // right bottom 2,1,isMine
+                if(i + columns + 1 <= board.length - 1 && i + columns + 1 % columns != columns - 1 && i + columns + 1 <= board.length - 1 && !board[i + columns + 1].isMine()){
+                    board[i + columns + 1].increase();
                 }
             }
         }
