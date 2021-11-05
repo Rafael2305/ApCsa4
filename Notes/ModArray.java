@@ -17,10 +17,6 @@ public class ModArray
     }
     public void insertNum(int num, int index){
         // insertNum(1, 2);
-        // arr[index + 2] = arr[index + 1];
-        // arr[index + 1] = arr[index];
-        // arr[index] = num;
-        
         for(int i = arr.length - 1; i >= index; i--){
             arr[i] = arr[i-1];
         }
