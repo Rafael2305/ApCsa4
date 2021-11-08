@@ -36,7 +36,7 @@ public class MinesweeperBoard{
     public void addMines(int mines) throws Exception{
         if (mines < 0){
             throw new Exception("This is a negative number");
-        } else if (mines > 100){
+        } else if (mines > board.length){
             throw new Exception("There are more mines then spots possible");
         } else{
             for(int i = 0; i < mines; i++){

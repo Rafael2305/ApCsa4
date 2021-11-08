@@ -35,61 +35,24 @@ public class MinesweeperBoard2{
     public void addMines(int mines) throws Exception{
         if (mines < 0){
             throw new Exception("This is a negative number");
-        } else if (mines > board.length){
+        } else if (mines > rows * columns){
             throw new Exception("There are more mines then spots possible");
         } else{
-            // for(int i = 0; i < mines; i++){
-                // int adderRow = (int)(Math.random() * );
-                // int adderCol = (int)(Math.random() * );
-            // }
-            
-            // for(int i = 0; i < mines; i++){
-                // int adder = (int)(Math.random() * board.length);
-                // if(board[adder].getValue() == 0){
-                    // board[adder].setValueMine();
-                // } else{
-                    // i--;
-                // }
-            // }
+            for(int i = 0; i < mines; i++){
+                int adderRow = (int)(Math.random() * rows);
+                int adderCol = (int)(Math.random() * columns);
+                if (board[adderRow][adderCol].getValue() == 0){
+                    board[adderRow][adderCol].setValueMine();
+                } else{
+                    i--;
+                }
+            }
         }
     }
 
     public void addNums(){
-        for(int i = 0; i < board.length; i++){
-            if(board[i].isMine()){
-                // left and right
-                if(i - 1 >= 0 && i % columns != 0 && !board[i - 1].isMine()){
-                    board[i - 1].increase();
-                }
-                if(i + 1 <= board.length - 1 && i % columns != columns - 1 && !board[i + 1].isMine()){
-                    board[i + 1].increase();
-                }
-                
-                // top and bottom
-                if(i - columns >= 0 && !board[i - columns].isMine()){
-                    board[i - columns].increase();
-                }
-                if(i + columns <= board.length - 1 && !board[i + columns].isMine()){
-                    board[i + columns].increase();
-                }
-                
-                // left top
-                if(i - columns - 1 >= 0 && i  % columns != 0 && !board[i - columns - 1].isMine()){
-                    board[i - columns - 1].increase();
-                }
-                // right top
-                if(i - columns + 1 < board.length && i % columns != columns - 1 && i - columns + 1 >= 0 && !board[i - columns + 1].isMine()){
-                    board[i - columns + 1].increase();
-                }
-                //left bottom
-                if(i + columns - 1 >= 0 && i % columns != 0 && i + columns - 1 <= board.length - 1 && !board[i + columns - 1].isMine()){
-                    board[i + columns - 1].increase();
-                }
-                // right bottom
-                if(i + columns + 1 <= board.length - 1 && i % columns != columns - 1 && !board[i + columns + 1].isMine()){
-                    board[i + columns + 1].increase();
-                }
-            }
+        for(int i = 0; i < rows * columns; i++){
+            
         }
     }
 
@@ -97,31 +60,26 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
-        for(int [] row : board){
-            for(: row){
-                
+        for(Cell[] row : board){
+            for(Cell cell : row){
+                if(!cell.isMine()){
+                    System.out.print(cell.getValue() + " ");
+                } else{
+                    System.out.print("X ");
+                }
             }
-            system.out.println();
+            System.out.println();
         }
-        
-        // for(int r = 0; r < rows; r++){
-            // for (int c = 0; c < columns; c++){
-                // if (!board[r * columns + c].isMine()){
-                    // System.out.print(board[r * columns + c].getValue() + " ");
-                // } else{
-                    // System.out.print("X ");
-                // }
-            // }
-            // System.out.println();
-        // }
     }
-
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
-        for(int i = 0; i< rows*columns; i++){
-            board[i] = new Cell();
-            panel.add(board[i].getButton());
+        for(int r = 0; r < board.length; r++){
+            for(int c = 0; c < board[0].length; c++){
+                board[r][c] = new Cell();
+                panel.add(board[r][c].getButton());
+            }
         }
         return panel;
     }
 }
+
