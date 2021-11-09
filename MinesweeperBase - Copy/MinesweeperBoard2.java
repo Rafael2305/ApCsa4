@@ -51,8 +51,44 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){
-        for(int i = 0; i < rows * columns; i++){
-            
+        for(int r = 0; r < rows; r++){
+            for (int c = 0; c < columns; c++){
+                if(board[r][c].isMine()){
+                    //top
+                    if(r - 1 >= 0 && !board[r - 1][c].isMine()){
+                        board[r - 1][c].increase();
+                    }
+                    //bottom
+                    if(r + 1 < rows && !board[r + 1][c].isMine()){
+                        board[r + 1][c].increase();
+                    }
+                    //left
+                    if(c - 1 >= 0 && !board[r][c - 1].isMine()){
+                        board[r][c-1].increase();
+                    }
+                    //right
+                    if(c + 1 < columns && !board[r][c + 1].isMine()){
+                        board[r][c + 1].increase();
+                    }
+                    //
+                    //top left
+                    if(r - 1 >= 0 && c - 1 >= 0 && !board[r - 1][c - 1].isMine()){
+                        board[r - 1][c - 1].increase();
+                    }
+                    //top right
+                    if(r - 1 >= 0 &&  c + 1 < columns && !board[r - 1][c + 1].isMine()){
+                        board[r - 1][c + 1].increase();
+                    }
+                    //bottom left
+                    if(r + 1 < rows && c - 1 >= 0 && !board[r + 1][c - 1].isMine()){
+                        board[r + 1][c - 1].increase();
+                    }
+                    //bottom right
+                    if(r + 1 < rows && c + 1 < columns && !board[r + 1][c + 1].isMine()){
+                        board[r + 1][c + 1].increase();
+                    }
+                }
+            }
         }
     }
 
@@ -71,6 +107,7 @@ public class MinesweeperBoard2{
             System.out.println();
         }
     }
+
     public JPanel addCells(){
         JPanel panel = new JPanel(new GridLayout(rows,columns));
         for(int r = 0; r < board.length; r++){
