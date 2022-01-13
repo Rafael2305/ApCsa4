@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=School
+comment1.params=schoolID
+comment1.target=School(int)
+comment2.params=student
+comment2.target=void\ addStudent(Student)
+comment3.params=
+comment3.target=void\ removeFirstStudent()
+comment4.params=student
+comment4.target=void\ removeStudent(Student)
+comment4.text=\r\n\ Removes\ the\ student\ from\ the\ list\r\n\ and\ returns\r\n\ \r\n\ Working\ with\ index\:\ reg\ for\ loop\r\n\ Anything\ else\ w/\ no\ change\:\ enhanced\r\n\ Comparing\ objects\ .equals\r\n\ Comparing\ primative\ \=\=\r\n
+comment5.params=numOfStudents
+comment5.target=void\ testAddStudent(int)
+numComments=6

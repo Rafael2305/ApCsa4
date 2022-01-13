@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=District
+comment1.params=
+comment1.target=District()
+comment2.params=school
+comment2.target=void\ addSchool(School)
+comment3.params=school
+comment3.target=void\ removeSchool(School)
+comment4.params=numOfSchools
+comment4.target=void\ testAddSchools(int)
+numComments=5
