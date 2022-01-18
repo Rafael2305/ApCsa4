@@ -60,4 +60,17 @@ public class School
             nextIDnum++;
         }
     }
+    public ArrayList<Student> getStudents()
+    {
+        return listOfStudents;
+    }
+    public int getID()
+    {
+        return ID;
+    }
+    public void updateStudent(int index, Student student)
+    {
+        listOfStudents.set(index, student); 
+        //; Changes or overwrites the index to be the new student
+    }
     }
