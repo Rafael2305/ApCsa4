@@ -11,4 +11,6 @@ comment4.target=void\ testAddSchools(int)
 comment5.params=
 comment5.target=void\ printAllStudents()
 comment5.text=\ Goal\:\ Creat\ a\ method\ that\ prints\ out\ EVERY\ student's\ name\ and\ ID\ number\r\n\ \r\n\ <Student's\ name>\:\ SchoolID\ \:\ StudentID\r\n\ Example\:\r\n\ \ "Test"\:\ 1\ \:\ 1\r\n
-numComments=6
+comment6.params=school
+comment6.target=void\ addFirstSchool(School)
+numComments=7
