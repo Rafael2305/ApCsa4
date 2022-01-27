@@ -15,7 +15,6 @@ public class Question4
     {
         list1 = new ArrayList<Integer>();
         list2 = new ArrayList<Integer>();
-        list2.add(0);
         Scanner scanner = new Scanner(System.in);
         int inNum;
         while(list1.size() < 5)
@@ -26,7 +25,7 @@ public class Question4
         }
         for(int i = 0; i < list1.size(); i++)
         {
-            list2.set(i, list1.get(i));
+            list2.add(i, list1.get(i));
         }
     }
 }
