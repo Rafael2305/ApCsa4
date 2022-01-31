@@ -12,13 +12,29 @@ public class Question6
     ArrayList<Integer> numArr;
     int largest;
     int smallest;
-    int arrListNum = (int)(Math.random() * 21 + 5);
     public Question6()
     {
         numArr = new ArrayList<Integer>();
-        for(int i = 0; i < arrListNum; i++)
+        for(int i = 0; i < 11; i++)
         {
-            
+            int ranNum = (int)(Math.random() * 20 + 1);
+            numArr.add(ranNum);
+        }
+    }
+    public void bigAndSmall()
+    {
+        largest = numArr.get(0);
+        smallest = numArr.get(0);
+        for(int num : numArr)
+        {
+            if(num > largest)
+            {
+                largest = num;
+            }
+            if(num < smallest)
+            {
+                smallest = num;
+            }
         }
     }
 }
