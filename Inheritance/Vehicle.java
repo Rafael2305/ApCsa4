@@ -5,7 +5,7 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Vehicle
+public abstract class Vehicle //There is a secret....It auto-extends Object.
 {
     String engineType;
     public Vehicle(String engine)
