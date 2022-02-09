@@ -10,13 +10,19 @@ public class Item implements ItemInterface
 {
     //Implemented in your own way
     String itemName;
-    int amount;
-    public Item(String name)
+    int itemRarity;
+    public Item(String name, int rarity)
     {
         itemName = name;
+        itemRarity = rarity;
     }
 
-    public String getName(){
+    public String getName()
+    {
         return itemName;
+    }
+    public int getRarity()
+    {
+        return itemRarity;
     }
 }

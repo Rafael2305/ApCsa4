@@ -1,19 +1,23 @@
 
 /**
- * Write a description of class Consumable here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Write a description of class Consumable here:
+ *  
+ * Items that can only be used once
+ * 
  */
-public class Consumable extends Item
+public abstract class Consumable extends Item
 {
-    int amountOf;
-    public Consumable()
+    int conAmount;
+    public Consumable(String name, int rarity, int amount)
     {
-        amountOf = 0;
+        super(name, rarity);
+        conAmount = amount;
     }
-    public Consumable(String name)
+    
+    public void use()
     {
-        super(name);
+        System.out.println("You use: " + itemName);
+        conAmount--;
+        System.out.println("You have: " + conAmount + " left");
     }
 }
