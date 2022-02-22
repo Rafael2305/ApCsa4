@@ -15,6 +15,7 @@ public class Medkit extends Consumable
     public void use()
     {
         System.out.println("You use: " + itemName);
+        System.out.println("Type: Medkit");
         conAmount--;
         System.out.println("You have: " + conAmount + " left");
         System.out.println();
