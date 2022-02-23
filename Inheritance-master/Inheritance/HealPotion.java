@@ -2,41 +2,25 @@
 /**
  * Write a description of class HealPotion here:
  *
- * Will heal you, not as strong as Medkit.
+ * Will heal you for 50hp.
  * 
  */
-public class HealPotion extends Consumable
+public class HealPotion extends Healable
 {
-    public HealPotion(String name, int rarity, int amount)
+    public HealPotion(String name, int amount)
     {
-        super(name, rarity, amount);
+        super(name, 25 , amount, 50);
     }
     
     public void use()
     {
-        System.out.println("You use: " + itemName);
+        System.out.println("You drink: " + itemName);
         System.out.println("Type: Heal Potion");
-        conAmount--;
-        System.out.println("You have: " + conAmount + " left");
+        healableAmount--;
+        System.out.println("You have: " + healableAmount + " left");
         System.out.println();
         System.out.println("________________________");
         System.out.println();
-        
-        if(itemRarity <= 50)
-        {
-            System.out.println("You are healed a tiny bit!");
-        }
-        if(itemRarity > 50 && itemRarity <= 100)
-        {
-            System.out.println("You are healed a little bit!");
-        }
-        if(itemRarity > 100 && itemRarity <= 150)
-        {
-            System.out.println("You are healed a bit!");
-        }
-        if(itemRarity > 150)
-        {
-            System.out.println("You are fully healed!");
-        }
+        System.out.println("You will be healed for 50hp.");
     }
 }

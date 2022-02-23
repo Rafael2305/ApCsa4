@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Medkit
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Medkit\ here\:\r\n\r\n\ Will\ heal\ you,\ stronger\ then\ HealPotion\ (plus\ 50\ rarity).\r\n\ \r\n
-comment1.params=name\ rarity\ amount
-comment1.target=Medkit(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Medkit\ here\:\r\n\r\n\ Will\ heal\ you\ for\ 100hp.\r\n\ \r\n
+comment1.params=name\ amount
+comment1.target=Medkit(java.lang.String,\ int)
 comment2.params=
 comment2.target=void\ use()
 numComments=3

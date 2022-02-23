@@ -1,26 +1,25 @@
 
 /**
- * Write a description of class Medkit here:
+ * Write a description of class HealPatch here.
  *
- * Will heal you for 100hp.
- * 
+ * Will not heal you for a lot but are very common
  */
-public class Medkit extends Healable
+public class HealPatch extends Healable
 {
-    public Medkit(String name, int amount)
+    public HealPatch(String name, int amount)
     {
-        super(name, 50, amount, 100);
+        super(name, 10 , amount, 5);
     }
     
     public void use()
     {
         System.out.println("You use: " + itemName);
-        System.out.println("Type: Medkit");
+        System.out.println("Type: Heal Potion");
         healableAmount--;
         System.out.println("You have: " + healableAmount + " left");
         System.out.println();
         System.out.println("________________________");
         System.out.println();
-        System.out.println("You will be healed for 100hp");
+        System.out.println("You will be healed for 5hp.");
     }
 }

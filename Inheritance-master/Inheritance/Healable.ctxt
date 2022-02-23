@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.target=Consumable
+comment0.target=Healable
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Consumable\ here\:\r\n\ \ \r\n\ Items\ that\ can\ only\ be\ used\ once\r\n\ \r\n
-comment1.params=name\ rarity\ amount
-comment1.target=Consumable(java.lang.String,\ int,\ int)
+comment1.params=name\ rarity\ amount\ heal
+comment1.target=Healable(java.lang.String,\ int,\ int,\ int)
 comment2.params=
 comment2.target=void\ use()
-numComments=3
+comment3.params=
+comment3.target=void\ checkAmount()
+numComments=4
