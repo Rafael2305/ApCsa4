@@ -19,7 +19,12 @@ public abstract class Weapon extends Item
     public void attack()
     {
         System.out.println("You atack with: " + itemName);
-        weaponDurability -= 5;
-        
+        System.out.println(itemName + " does " + weaponDamage + " damage.");
+        weaponDurability--;
+    }
+    
+    public int getDurability()
+    {
+        return weaponDurability;
     }
 }

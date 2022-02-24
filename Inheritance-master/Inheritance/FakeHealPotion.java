@@ -20,8 +20,8 @@ public class FakeHealPotion extends Healable
         System.out.println();
         System.out.println("________________________");
         System.out.println();
-        
         System.out.println("Did nothing, does taste like cherry though.");
         System.out.println("Tasty!");
+        System.out.println();
     }
 }

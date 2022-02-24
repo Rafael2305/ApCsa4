@@ -5,4 +5,6 @@ comment1.params=name\ rarity\ damage\ durability
 comment1.target=Weapon(java.lang.String,\ int,\ int,\ int)
 comment2.params=
 comment2.target=void\ attack()
-numComments=3
+comment3.params=
+comment3.target=int\ getDurability()
+numComments=4

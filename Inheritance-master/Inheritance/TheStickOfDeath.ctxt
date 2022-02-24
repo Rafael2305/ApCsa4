@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TheStickOfDeath
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ TheStickOfDeath\ here.\r\n\r\n\ A\ stick\ brought\ from\ the\ world\ of\ Minecraft,\ enchanted\ to\ the\ max.\r\n
+comment1.params=name
+comment1.target=TheStickOfDeath(java.lang.String)
+comment2.params=
+comment2.target=void\ attack()
+numComments=3

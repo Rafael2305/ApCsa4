@@ -22,5 +22,6 @@ public class Medkit extends Healable
         System.out.println("________________________");
         System.out.println();
         System.out.println("You will be healed for 100hp");
+        System.out.println();
     }
 }
