@@ -22,4 +22,7 @@ public class TheStickOfDeath extends Weapon
         System.out.println("Weapon Durability + 5, this stick becomes harder to break the more it is used.");
         System.out.println();
     }
+    public boolean parry(){
+        return false;
+    }
 }
