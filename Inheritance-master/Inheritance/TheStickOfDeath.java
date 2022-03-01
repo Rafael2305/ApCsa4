@@ -8,7 +8,7 @@ public class TheStickOfDeath extends Weapon
 {
     public TheStickOfDeath(String name)
     {
-        super(name, 10000, 50, 1);
+        super(name, 100, 50, 5);
     }
     
     public void attack()
@@ -17,12 +17,13 @@ public class TheStickOfDeath extends Weapon
         System.out.println("The world starts to shake and tremble.");
         System.out.println("You strike with all your might.");
         System.out.println();
-        System.out.println("You do 25 damage (still a stick after all) :,(");
+        System.out.println("50 damage (still a stick after all) :,(");
         weaponDurability += 5;
         System.out.println("Weapon Durability + 5, this stick becomes harder to break the more it is used.");
         System.out.println();
     }
-    public boolean parry(){
-        return false;
+    public boolean parry()
+    {
+        return true;
     }
 }

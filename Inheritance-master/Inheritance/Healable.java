@@ -8,12 +8,12 @@
 public abstract class Healable extends Item
 {
     int healableAmount;
-    int healableheal;
+    int healableHeal;
     public Healable(String name, int rarity, int amount, int heal)
     {
         super(name, rarity);
-        healableheal = amount;
-        heal = heal;
+        healableAmount = amount;
+        healableHeal = heal;
     }
 
     public void use()

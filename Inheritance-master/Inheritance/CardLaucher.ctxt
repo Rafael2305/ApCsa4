@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CardLaucher
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CardLaucher\ here.\r\n\r\n\ Weapon\ that\ shoots\ 4\ metal\ cards\ at\ a\ time,\ fancy\ yet\ effective\r\n
+comment1.params=name
+comment1.target=CardLaucher(java.lang.String)
+comment2.params=
+comment2.target=void\ attack()
+comment3.params=
+comment3.target=boolean\ parry()
+numComments=4
