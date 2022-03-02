@@ -24,4 +24,9 @@ public class HealPotion extends Healable
         System.out.println("You will be healed for 50hp.");
         System.out.println();
     }
+    
+    public void checkAmount()
+    {
+        System.out.println("You have " + healableAmount + "left");
+    }
 }
