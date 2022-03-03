@@ -9,7 +9,7 @@ public class HealRoot extends Healable
 {
     public HealRoot(String name, int amount)
     {
-        super(name, 100 , amount, 200);
+        super(name, "Legendary", amount, 200);
     }
     
     public void use()

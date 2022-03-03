@@ -10,7 +10,7 @@ public class Rock extends Weapon
     int rockAmount;
     public Rock(String name, int amount)
     {
-        super(name, 1, 10, 1);
+        super(name, "Common", 10, 1);
         rockAmount = amount;
     }
     

@@ -9,7 +9,7 @@ public class CardLaucher extends Weapon
     int cardAmount;
     public CardLaucher(String name, int amount)
     {
-        super(name, 70, 40, 200);
+        super(name, "Rare", 40, 200);
         cardAmount = amount;
     }
     

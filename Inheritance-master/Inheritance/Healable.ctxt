@@ -2,7 +2,7 @@
 comment0.target=Healable
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Consumable\ here\:\r\n\ \ \r\n\ Items\ that\ can\ only\ be\ used\ once\r\n\ \r\n
 comment1.params=name\ rarity\ amount\ heal
-comment1.target=Healable(java.lang.String,\ int,\ int,\ int)
+comment1.target=Healable(java.lang.String,\ java.lang.String,\ int,\ int)
 comment2.params=
 comment2.target=void\ use()
 comment3.params=

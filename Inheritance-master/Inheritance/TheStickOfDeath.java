@@ -8,7 +8,7 @@ public class TheStickOfDeath extends Weapon
 {
     public TheStickOfDeath(String name)
     {
-        super(name, 100, 50, 5);
+        super(name, "Legendary", 50, 5);
     }
     
     public void attack()

@@ -8,7 +8,7 @@ public class HealPatch extends Healable
 {
     public HealPatch(String name, int amount)
     {
-        super(name, 10 , amount, 5);
+        super(name, "Common" , amount, 5);
     }
     
     public void use()

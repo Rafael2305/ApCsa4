@@ -10,8 +10,8 @@ public class Item implements ItemInterface
 {
     //Implemented in your own way
     String itemName;
-    int itemRarity;
-    public Item(String name, int rarity)
+    String itemRarity;
+    public Item(String name, String rarity)
     {
         itemName = name;
         itemRarity = rarity;
@@ -21,7 +21,7 @@ public class Item implements ItemInterface
     {
         return itemName;
     }
-    public int getRarity()
+    public String getRarity()
     {
         return itemRarity;
     }

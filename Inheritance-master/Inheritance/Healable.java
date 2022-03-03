@@ -9,7 +9,7 @@ public abstract class Healable extends Item
 {
     int healableAmount;
     int healableHeal;
-    public Healable(String name, int rarity, int amount, int heal)
+    public Healable(String name, String rarity, int amount, int heal)
     {
         super(name, rarity);
         healableAmount = amount;

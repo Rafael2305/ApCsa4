@@ -8,7 +8,7 @@ public class FakeHealPotion extends Healable
 {
     public FakeHealPotion(String name, int amount)
     {
-        super(name, 5, amount, 0);
+        super(name, "LOL >=)", amount, 0);
     }
     
     public void use()

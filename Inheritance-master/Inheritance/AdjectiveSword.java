@@ -10,7 +10,7 @@ public class AdjectiveSword extends Weapon
     String swordAdj;
     public AdjectiveSword(String name, int damage, String adj)
     {
-        super(name, 75, damage, 100);
+        super(name, "Epic", damage, 100);
         swordAdj = adj;
     }
     

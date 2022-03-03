@@ -9,7 +9,7 @@ public class HealPotion extends Healable
 {
     public HealPotion(String name, int amount)
     {
-        super(name, 25 , amount, 50);
+        super(name, "Rare" , amount, 50);
     }
     
     public void use()

@@ -9,7 +9,7 @@ public abstract class Weapon extends Item implements WeaponInterface
 {
     int weaponDamage;
     int weaponDurability;
-    public Weapon(String name, int rarity, int damage, int durability)
+    public Weapon(String name, String rarity, int damage, int durability)
     {
         super(name, rarity);
         weaponDamage = damage;

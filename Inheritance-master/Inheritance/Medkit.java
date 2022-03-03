@@ -9,7 +9,7 @@ public class Medkit extends Healable
 {
     public Medkit(String name, int amount)
     {
-        super(name, 50, amount, 100);
+        super(name, "Epic", amount, 100);
     }
     
     public void use()

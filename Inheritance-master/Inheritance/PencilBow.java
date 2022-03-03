@@ -10,7 +10,7 @@ public class PencilBow extends Weapon
     int pencilAmount;
     public PencilBow(String name, int amount)
     {
-        super(name, 70, 20, 200);
+        super(name, "Uncommon", 20, 200);
         pencilAmount = amount;
     }
     
